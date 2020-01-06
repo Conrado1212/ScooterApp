@@ -25,7 +25,7 @@ public class AuthorizationController {
     public  String authenticateUser(@ModelAttribute("userModel")User user,Model model){
         boolean authResult = this.authenticationService.authenticateUser(user);
         if(authResult){
-            return "main";
+            return "redirect:scooterPage";
         }else{
             model.addAttribute("errorMessage","zle dane!!!");
             model.addAttribute("userModel",new User());
