@@ -10,6 +10,11 @@ public class ScooterServiceImpl implements IScooterServices {
     @Autowired
     IScooterDAO scooterDAO;
 
+    public ScooterServiceImpl(IScooterDAO scooterDAO) {
+        this.scooterDAO = scooterDAO;
+    }
+
+
     @Override
    public  void addScooter(Scooter scooter){
        Scooter scooterFromDb = this.scooterDAO.getScooter(scooter.getId());
