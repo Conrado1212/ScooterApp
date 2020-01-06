@@ -11,7 +11,7 @@ import pl.edu.wszib.services.IAuthenticationService;
 
 @Controller
 public class AuthorizationController {
-    @Autowired
+
     IAuthenticationService authenticationService;
 
     @RequestMapping(value = "loginPage",method = RequestMethod.GET)

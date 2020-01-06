@@ -11,7 +11,7 @@ import pl.edu.wszib.dao.impl.ScooterDAOImpl;
 
 @Controller
 public class ScooterController {
-    @Autowired
+
     ScooterDAOImpl scooterDAO;
 
     @RequestMapping(value = "/scooter_page",method = RequestMethod.GET)
