@@ -1,7 +1,14 @@
 package pl.edu.wszib.model;
 
+
+import javax.persistence.*;
+
+@Entity
+@Table(name="tscooter")
 public class Scooter {
-    private int Id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
     private String brand;
     private String model;
     private int price;
@@ -11,18 +18,18 @@ public class Scooter {
     }
 
     public Scooter(int id, String brand, String model, int price) {
-        Id = id;
+        this.id = id;
         this.brand = brand;
         this.model = model;
         this.price = price;
     }
 
     public int getId() {
-        return Id;
+        return id;
     }
 
     public void setId(int id) {
-        Id = id;
+        id = id;
     }
 
     public String getBrand() {
@@ -52,7 +59,7 @@ public class Scooter {
     @Override
     public String toString() {
         return "Scooter{" +
-                "Id=" + Id +
+                "id=" + id +
                 ", brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
                 ", price=" + price +

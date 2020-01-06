@@ -15,7 +15,9 @@ public class ScooterDAOImpl implements IScooterDAO {
     @Autowired
     SessionFactory sessionFactory;
 
-
+    public ScooterDAOImpl(SessionFactory sessionFactory){
+        this.sessionFactory = sessionFactory;
+    }
     @Override
     public void addScooter(Scooter scooter){
        // Session session = factory.openSession();
